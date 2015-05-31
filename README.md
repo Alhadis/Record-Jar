@@ -4,8 +4,7 @@ Record-Jar
 A self-contained JavaScript class for parsing and packing data in the so-called "record-jar" metaformat.
 
 
-The what?
----------
+#### The what?
 This is a "record-jar":
 
 ```text
@@ -50,15 +49,14 @@ pronoun."
 You get it.
 
 
-When the hell would I use this?
--------------------------------
+#### When the hell would I use this?
 
 Probably for the exact same reason I wrote it: for parsing the IANA subtag registry. Furthermore, I don't expect this script will invoke a loadbalancer-shattering level of demand, but it's nice knowing it might benefit somebody out there one day needing to build a list of BCP 47 tags.
 
 
 
-Usage
------
+## Usage
+
 Create a new `RecordJar` instance by passing it a block of text as its first argument.
 
 ```js
