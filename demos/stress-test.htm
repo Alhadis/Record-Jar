@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1" />
+<title>JarSmasher.js</title>
+<style>#mumbo-jumbo{white-space:pre;tab-size:4;font:11px/normal Menlo,monospace;padding-top:43px;}</style>
+</head>
+
+<body>
+
+	<div id="mumbo-jumbo">File-Date: 2014-12-17
+%%
+Type: variant
+Subtag: unifon
+Description: Unifon phonetic alphabet
+Added: 2013-10-02
+Prefix: en
+Prefix: hup
+Prefix: kyh
+Prefix: tol
+Prefix: yur
+%%
+Type: language
+Subtag: aa
+Description: Afar
+Added: 2005-10-16
+Pls: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse elit lectus leo, congue ac leo id, vulputate pretium enim. Praesent congue, \
+	 odio at placerat ultricies, mi libero \\
+Pls: sed nisl sit amet metus volutpat malesuada eget nec orci. In \
+     Lacinia nulla, sit amet scelerisque nunc tortor et ligula. \
+     Maecenas sit amet ipsum ac est ullamcorper aliquet. Donec \
+     a ipsum volutpat, aliquet quam sed, eleifend neque. \
+     Pellentesque habitant morbi tristique senectus et netus et\
+     malesuada fames ac turpis egestas. Integer sed porta nisl>
+%%
+Type: language
+Subtag: ab
+Description: Abkhazian
+Added: 2005-10-16
+Suppress-Script: Cyrl
+%%
+Type: language
+Subtag: ae
+Description: Avestan
+Added: 2005-10-16
+%%</div>
+
+
+	<script type="text/javascript" src="../record-jar.js"></script>
+	<script type="text/javascript">
+		/** Demo usage */
+		var	txt		=	document.getElementById("mumbo-jumbo").innerHTML,
+			a		=	RecordJar(txt);
+			a.records[0].Subtag	=	(function(s){
+				return "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA" + s;
+				return s;
+				var cutoff	=	30;
+				return "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA" + (s.substr(0, cutoff) + " " + s.substr(cutoff));
+			}(Array(300).join("B")));
+
+		function requestText(url, callback){
+			var req	=	new XMLHttpRequest();
+			req.open("GET", url);
+			req.addEventListener("load", callback);
+			req.send();
+		}
+			/*
+		requestText("txt/demo.txt", function(){
+			a	=	RecordJar(this.responseText);
+			console.log(a+"");
+		});*/
+	</script>
+
+</body>
+</html>

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Basic usage</title>
+<style type="text/css">
+*{
+	-webkit-box-sizing:	border-box;
+	-moz-box-sizing:	border-box;
+	box-sizing:			border-box;
+	tab-size: 4;
+}
+
+html{
+	background: #eee;
+}
+
+
+/** "Before-and-after" blocks */
+pre{
+	padding: .5em;
+	background: #fff;
+	border: 1px solid #444;
+	word-break: break-all;
+	white-space: pre-line;
+}
+	/** Ugly title */
+	pre::before{
+		content: attr(title);
+		background: #000;
+		color: #fff;
+		white-space: normal;
+		word-break: normal;
+		display: block;
+		margin: -.5em -.5em .5em;
+		padding: .5em 1em;
+	}
+
+
+/** Switch to a two-column layout for screens wide enough to handle it. */
+@media (min-width: 43.75em){
+	pre{
+		position: absolute;
+		overflow: scroll;
+		top:	0;
+		bottom:	0;
+		margin:	1em;
+		width:	50%;
+	}
+		pre:first-of-type	{	left:	0;	}
+		pre + pre			{	right:	0;	}	
+}
+</style>
+</head>
+
+
+
+<body>
+
+	<pre title="Source text">
+Planet: Mercury
+Orbital-Radius: 57,910,000 km
+Diameter: 4,880 km
+Mass: 3.30e23 kg
+%%
+Planet: Venus
+Orbital-Radius: 108,200,000 km
+Diameter: 12,103.6 km
+Mass: 4.869e24 kg
+%%
+Planet: Earth
+Orbital-Radius: 149,600,000 km
+Diameter: 12,756.3 km
+Mass: 5.972e24 kg
+Moons: Luna
+	</pre>
+
+	<pre title="Stringified JSON output"></pre>
+
+	
+	
+	<script type="text/javascript" src="../record-jar.js"></script>
+	<script type="text/javascript">
+		var sourceBlocks	=	document.getElementsByTagName("pre"),
+			from			=	sourceBlocks[0],
+			to				=	sourceBlocks[1],
+
+			jar				=	new RecordJar(from.textContent);
+			to.textContent	=	JSON.stringify(jar);
+			
+			console.info("Demo RecordJar's been created in the global context, assigned to the variable \"jar\".");
+			console.dir(jar);
+	</script>
+
+</body>
+</html>
