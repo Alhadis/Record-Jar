@@ -1,27 +1,18 @@
 {
-  "name": "record-jar",
-  "version": "1.0.1",
-  "description": "Self-contained JavaScript class for reading and writing data from the \"record-jar\" metaformat.",
-  "homepage": "https://github.com/Alhadis/Record-Jar",
-  "keywords": [
-    "record",
-    "jar",
-    "metaformat",
-    "data",
-    "format",
-    "text",
-    "iana",
-    "subtag",
-    "language"
-  ],
-  "author": "John Gardner <gardnerjohng@gmail.com>",
-  "license": "MIT",
-  "main": "record-jar.js",
-  "contributors": [],
-  "dependencies": [],
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/Alhadis/Record-Jar.git"
-  },
-  "scripts": {}
+	"name": "record-jar",
+	"version": "1.0.2",
+	"description": "Self-contained JavaScript class for reading and writing data from the \"record-jar\" metaformat.",
+	"homepage": "https://github.com/Alhadis/Record-Jar",
+	"keywords": ["record", "jar", "metaformat", "data", "format", "text", "iana", "subtag", "language"],
+	"author": "John Gardner <gardnerjohng@gmail.com>",
+	"license": "MIT",
+
+	"scripts": {},
+	"main": "record-jar.js",
+	"contributors": [],
+	"dependencies": [],
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/Alhadis/Record-Jar.git"
+	}
 }
