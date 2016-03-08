@@ -5,7 +5,7 @@
 	
 	function RecordJar(input){
 		
-		/** Allow RecordJars to be constructed instantiated "statically" (without the "new" operator). */
+		/** Allow RecordJars to be constructed "statically" (without the "new" operator). */
 		if(undefined === this || this.constructor !== RecordJar)
 			return new RecordJar(input);
 		
