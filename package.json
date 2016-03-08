@@ -11,6 +11,11 @@
 	"main": "record-jar.js",
 	"contributors": [],
 	"dependencies": [],
+	"devDependencies": {
+		"mocha":     "*",
+		"chai":      "*",
+		"chai-diff": "*"
+	},
 	"repository": {
 		"type": "git",
 		"url": "https://github.com/Alhadis/Record-Jar.git"
