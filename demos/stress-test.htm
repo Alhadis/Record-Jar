@@ -47,27 +47,27 @@ Added: 2005-10-16
 %%</div>
 
 
-	<script type="text/javascript" src="../record-jar.js"></script>
-	<script type="text/javascript">
+	<script src="../record-jar.js"></script>
+	<script>
 		/** Demo usage */
-		var	txt		=	document.getElementById("mumbo-jumbo").innerHTML,
-			a		=	RecordJar(txt);
-			a.records[0].Subtag	=	(function(s){
-				return "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA" + s;
-				return s;
-				var cutoff	=	30;
-				return "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA" + (s.substr(0, cutoff) + " " + s.substr(cutoff));
-			}(Array(300).join("B")));
-
+		var txt  = document.getElementById("mumbo-jumbo").innerHTML;
+		var a    = RecordJar(txt);
+		a.records[0].Subtag = (function(s){
+			return "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA" + s;
+			return s;
+			var cutoff = 30;
+			return "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA" + (s.substr(0, cutoff) + " " + s.substr(cutoff));
+		}(Array(300).join("B")));
+		
 		function requestText(url, callback){
-			var req	=	new XMLHttpRequest();
+			var req = new XMLHttpRequest();
 			req.open("GET", url);
 			req.addEventListener("load", callback);
 			req.send();
 		}
-			/*
+		/*
 		requestText("txt/demo.txt", function(){
-			a	=	RecordJar(this.responseText);
+			a = RecordJar(this.responseText);
 			console.log(a+"");
 		});*/
 	</script>
