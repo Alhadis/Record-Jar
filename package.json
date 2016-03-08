@@ -5,8 +5,8 @@
 	"homepage": "https://github.com/Alhadis/Record-Jar",
 	"keywords": ["record", "jar", "metaformat", "data", "format", "text", "iana", "subtag", "language"],
 	"author": "John Gardner <gardnerjohng@gmail.com>",
-	"license": "MIT",
-
+	"license": "ISC",
+	
 	"scripts": {},
 	"main": "record-jar.js",
 	"contributors": [],
