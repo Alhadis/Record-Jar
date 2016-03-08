@@ -1,6 +1,6 @@
 {
 	"name": "record-jar",
-	"version": "1.0.3",
+	"version": "1.0.4",
 	"description": "Self-contained JavaScript class for reading and writing data from the \"record-jar\" metaformat.",
 	"homepage": "https://github.com/Alhadis/Record-Jar",
 	"keywords": ["record", "jar", "metaformat", "data", "format", "text", "iana", "subtag", "language"],
